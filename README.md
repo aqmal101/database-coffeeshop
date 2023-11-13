@@ -1,34 +1,44 @@
-# README Database Kafe Sederhana
+# Database Coffeeshop
 
-Ini adalah database sederhana untuk sebuah kafe. Database ini didesain untuk menyimpan informasi mengenai pelanggan, menu, pesanan, dan transaksi yang terjadi di kafe tersebut.
+Repositori ini berisi script SQL untuk membuat dan mengelola database kafe sederhana. Database ini terdiri dari beberapa tabel utama yang mencatat informasi mengenai menu, pesanan, pelanggan, kasir, transaksi, dan meja.
 
 ## Struktur Database
 
 Database ini terdiri dari beberapa tabel utama:
+1. **Tabel Menu**
+Tabel ini digunakan untuk menyimpan daftar menu yang tersedia di kafe. Setiap item menu memiliki ID unik, nama menu, harga satuan, dan jumlah stok yang tersedia.
 
-1. **Tabel Pelanggan**: Tabel ini menyimpan informasi mengenai pelanggan yang datang ke kafe. Ini mencakup nama, nomor telepon, dan alamat email mereka.
+2. **Tabel Pesanan**
+Tabel ini mencatat pesanan yang dibuat oleh pelanggan. Setiap pesanan terhubung dengan item menu dari tabel "Menu" melalui ID menu. Tabel ini juga mencatat jumlah pesanan, ID kasir yang menerima pesanan, dan nomor struk yang terkait dengan pesanan.
 
-2. **Tabel Menu**: Tabel ini berisi daftar menu yang tersedia di kafe, beserta harga dan deskripsi masing-masing item menu.
+3. **Tabel Pelanggan**
+Tabel ini digunakan untuk menyimpan informasi mengenai pelanggan kafe. Data pelanggan meliputi ID unik, nama pelanggan, nomor telepon, dan alamat email.
 
-3. **Tabel Pesanan**: Tabel ini mencatat pesanan pelanggan. Setiap entri dalam tabel ini terhubung dengan tabel pelanggan dan tabel menu, mencatat siapa yang memesan apa.
+4. **Tabel Kasir**
+Tabel ini berisi data mengenai kasir yang melayani pelanggan. Ini mencakup ID kasir, nama kasir, nomor telepon, email, dan shift kerja kasir.
 
-4. **Tabel Transaksi**: Tabel ini berisi catatan tentang transaksi yang terjadi di kafe. Ini mencakup informasi tentang waktu transaksi, total pembayaran, dan metode pembayaran yang digunakan.
+5. **Tabel Transaksi**
+Tabel ini mencatat semua transaksi yang terjadi di kafe. Setiap transaksi memiliki nomor struk unik, ID pelanggan yang membuat transaksi, ID kasir yang melayani transaksi, ID meja, tanggal transaksi, diskon yang diberikan, pajak yang dikenakan, total harga, dan uang kembalian.
 
-## Cara Menggunakan Database
+6. **Tabel Meja**
+Tabel ini digunakan untuk mengelola informasi tentang meja di kafe. Meja memiliki ID unik, ID pesanan yang saat ini terhubung (jika meja sudah dipesan), dan nomor meja.
 
-Anda dapat menggunakan database ini dengan aplikasi database seperti MySQL, PostgreSQL, atau MongoDB. Di bawah ini adalah beberapa langkah dasar untuk memulai:
+### Instruksi Penggunaan
+Script SQL dalam repositori ini dapat dijalankan menggunakan sistem manajemen basis data seperti MySQL, PostgreSQL, atau sejenisnya. Pastikan untuk menjalankan skrip secara berurutan, mulai dari pembuatan database hingga tabel-tabel yang diperlukan.
 
-1. Buat Database: Mulailah dengan membuat database di sistem database Anda. Anda dapat menggunakan perintah SQL untuk membuat tabel yang sesuai dengan struktur yang disebutkan di atas.
+### Catatan Penting
+- Pastikan untuk menyesuaikan perintah SQL dengan kebutuhan Anda sebelum dijalankan.
+- Dokumentasi tambahan seperti langkah-langkah instalasi dan penggunaan lebih lanjut bisa ditambahkan untuk mempermudah penggunaan database.
 
-2. Impor Data: Anda dapat memasukkan data pelanggan, menu, pesanan, dan transaksi ke dalam database sesuai dengan kebutuhan kafe Anda.
+### Lisensi
+Repositori ini disediakan di bawah lisensi [MIT](LICENSE). Anda bebas menggunakan, memodifikasi, dan mendistribusikan database ini sesuai dengan kebutuhan Anda.
 
-3. Menjalankan Query: Gunakan query SQL untuk mengakses dan memanipulasi data dalam database sesuai dengan kebutuhan kafe Anda. Anda dapat melakukan hal seperti menambahkan pesanan baru, menghitung total pendapatan, dan melihat data pelanggan.
-
-## Contoh Query
+### Kontribusi
+Jika Anda tertarik untuk berkontribusi, silakan fork repositori ini dan ajukan pull request dengan perubahan yang diusulkan.
 
 Berikut adalah beberapa contoh query SQL yang dapat Anda gunakan:
 
 - Menambahkan pelanggan baru ke database:
 
   ```sql
-  INSERT INTO pelanggan (nama, nomor_telepon, email) VALUES ('John Doe', '08123456789', 'john.doe@example.com');
+  INSERT INTO pelanggan (nama_pelanggan, no_telp, email) values ('Walter White', '0899783455541', 'heisenberg8989@gmail.com');
