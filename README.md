@@ -42,6 +42,6 @@ Berikut adalah beberapa contoh query SQL yang dapat Anda gunakan:
 
   ```sql
   INSERT INTO pelanggan (nama_pelanggan, no_telp, email)
-              VALUE ('Walter White', '0899783455541', 'heisenberg8989@gmail.com'),
+              VALUES ('Walter White', '0899783455541', 'heisenberg8989@gmail.com'),
                     ('Gustavo Fring', '0854242441121', 'chickenman123@gmail.com'),
                     ('Mike Ehrmantraut', '0855356117798', 'pipop765@gmail.com');
